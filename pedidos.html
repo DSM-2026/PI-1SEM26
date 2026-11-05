@@ -4,8 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/style-pedidos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul class="nav-esq">
+               <li><a class="active" href="./index.html">HOME</a></li>
+               <li><a href="./sobrenos.html">SOBRE NÓS</a></li>
+               <li><a href="./galeria.html">GALERIA</a></li>
+            </ul>
+            <img src="assets/images/logotipo.jpg.jpeg" alt="Logotipo do restaurante Seu Bentô">
+            <ul class="nav-dir">
+                <li><a href="./reservas.html">RESERVAS</a></li>
+                <li><a href="./pedidos.html">PEDIDOS</a></li>
+                <li><a href="./contato.html">CONTATO</a></li>
+            </ul>
+            <div class="icone-menu" id="botaoMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <ul class="menu-mobile" id="menuMobile">
+            <li><a class="active" href="./index.html">HOME</a></li>
+            <li><a href="./sobrenos.html">SOBRE NÓS</a></li>
+            <li><a href="./galeria.html">GALERIA</a></li>
+            <li><a href="./reservas.html">RESERVAS</a></li>
+            <li><a href="./pedidos.html">PEDIDOS</a></li>
+            <li><a href="./contato.html">CONTATO</a></li>
+        </ul>
+    </header>
+
+    <main style="display: flex; flex-grow: 1; justify-content: center; padding: 20px; margin-top: 80px;">
+        <div
+            style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: auto; margin-bottom: auto;">
+            <a href="" style="text-decoration: none;">
+                <div
+                    style="width: 360px; padding-left: 33px; padding-right: 33px; padding-top: 10px; padding-bottom: 10px; background: #FCF5EC; box-shadow: 0px 11px 4px rgba(0, 0, 0, 0.06); border-radius: 30px; flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: flex">
+                    <div
+                        style="color: black; font-size: 24px; font-family: Montserrat Alternates; font-weight: 800; word-wrap: break-word">
+                        Estamos no </div>
+                    <img style="width: 124px; height: 66px" src="assets/images/IFood_logo.svg.webp" />
+                </div>
+            </a>
+            <a href="" style="text-decoration: none;">
+                <div
+                    style="width: 360px; padding-left: 19px; padding-right: 19px; padding-top: 10px; padding-bottom: 10px; background: #FCF5EC; box-shadow: 0px 11px 4px rgba(0, 0, 0, 0.06); border-radius: 30px; flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: flex">
+                        <div
+                            style="color: black; font-size: 24px; font-family: Montserrat Alternates; font-weight: 800; word-wrap: break-word">
+                            Faça seu pedido pelo</div>
+                        <img style="width: 94px; height: 94px" src="assets/images/goomer_icon.png" />
+                    </div>
+            </a>
+            <a href="" style="text-decoration: none;">
+                    <div
+                        style="width: 360px; height: 135px; background: #FCF5EC; box-shadow: 0px 11px 4px rgba(0, 0, 0, 0.25); border-radius: 30px; flex-direction: column; justify-content: center; align-items: center; gap: 6px; display: flex;">
+                        <img style="width: 88px; height: 88px" src="assets/images/WhatsApp.svg.webp" />
+                        <div
+                            style="color: black; font-size: 24px; font-family: Montserrat Alternates; font-weight: 800; word-wrap: break-word">
+                            (19) 98904-8246</div>
+                    </div>
+            </a>
+        </div>
+    </main>
+
+    <footer style="margin-top: auto;">
+        <div
+            style="padding-left: 22px; padding-right: 22px; padding-top: 19px; padding-bottom: 19px; left: 0px; background: rgba(0, 0, 0, 0); justify-content: center; align-items: center; gap: 10px; display: inline-flex; width: 100%; box-sizing: border-box;">
+            <div
+                style="flex: 1 1 0; text-align: center; color: white; font-size: 28px; font-family: Montserrat Alternates; font-weight: 800; line-height: 34px; word-wrap: break-word">
+                O melhor da culinária japonesa e brasileira num só lugar</div>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/drop-down.js"></script>
 </body>
 </html>

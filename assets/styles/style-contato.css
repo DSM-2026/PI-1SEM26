@@ -43,11 +43,65 @@ main #contato .destaque {
 /* ---------- Base dos cards ---------- */
 main #contato .card-whatsapp,
 main #contato .card-endereco,
+
+/* ---------- CARD DO MAPA ---------- */
+
 main #contato .card-mapa {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+
     background: #FCF5EC;
     border-radius: 20px;
     box-shadow: 0 11px 4px rgba(0, 0, 0, 0.06);
 }
+
+/* ---------- GOOGLE MAPS ---------- */
+
+main #contato .mapa {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    aspect-ratio: 594 / 448;
+    height: auto;
+
+    border: 0;
+    border-radius: 12px;
+}
+
+/* ---------- TABLETS E CELULARES ---------- */
+
+@media (max-width: 768px) {
+    main #contato .card-mapa {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    main #contato .mapa {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* ---------- CELULAR EM PAISAGEM ---------- */
+
+@media (max-width: 950px) and (orientation: landscape) {
+    main #contato .mapa {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+}
+
 
 /* ---------- Card do WhatsApp ---------- */
 main #contato .card-whatsapp {

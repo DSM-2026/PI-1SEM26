@@ -22,7 +22,7 @@ body {
     font-family: "Montserrat Alternates", sans-serif;
     color: #fff;
 
-    background-image: url("../images/fundo-home.png");
+    background-image: url("../images/buffet_3.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,19 +32,19 @@ body {
 
 @media (min-width: 769px) and (max-width: 1199px) {
     body {
-        background-image: url("../images/fundo-home-mobile.jpeg");
+        background-image: url("../images/buffet_3.jpeg");
     }
 }
 
 @media (max-width: 768px) {
     body {
-        background-image: url("../images/fundo-home-mobile.jpeg");
+        background-image: url("../images/buffet_3.jpeg");
     }
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
     body {
-        background-position: center 80%;
+        background-position: center center;
     }
 }
 

@@ -1,11 +1,263 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Seu Bentô | Galeria</title>
-</head>
-<body>
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/global.css">
+    <link rel="stylesheet" href="./assets/styles/style-galeria.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-esq">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./sobrenos.html">SOBRE NÓS</a></li>
+                <li><a class="active" href="./galeria.html">GALERIA</a></li>
+            </ul>
+            <img src="assets/images/logotipo.jpg.jpeg" alt="Logotipo do restaurante Seu Bentô">
+            <ul class="nav-dir">
+                <li><a href="./reservas.html">RESERVAS</a></li>
+                <li><a href="./pedidos.html">PEDIDOS</a></li>
+                <li><a href="./contato.html">CONTATO</a></li>
+            </ul>
+            <div class="icone-menu" id="botaoMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <ul class="menu-mobile" id="menuMobile">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./sobrenos.html">SOBRE NÓS</a></li>
+            <li><a class="active" href="./galeria.html">GALERIA</a></li>
+            <li><a href="./reservas.html">RESERVAS</a></li>
+            <li><a href="./pedidos.html">PEDIDOS</a></li>
+            <li><a href="./contato.html">CONTATO</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="carrossel entrando" aria-roledescription="carrossel" aria-label="Galeria de fotos">
+            <button class="carrossel-seta anterior" type="button" aria-label="Anterior">&#8249;</button>
+
+            <div class="carrossel-trilho" tabindex="0">
+                <div class="cartao"><img src="assets/images/carrossel/IMG_01.jpeg" alt="Cartão 1"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_02.jpeg" alt="Cartão 2"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_03.jpeg" alt="Cartão 3"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_04.jpeg" alt="Cartão 4"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_05.jpeg" alt="Cartão 5"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_06.jpeg" alt="Cartão 6"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_07.jpeg" alt="Cartão 7"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_08.jpeg" alt="Cartão 8"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_09.jpeg" alt="Cartão 9"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_10.jpeg" alt="Cartão 10"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_11.jpeg" alt="Cartão 11"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_12.jpeg" alt="Cartão 12"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_13.jpeg" alt="Cartão 13"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_14.jpeg" alt="Cartão 14"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_15.jpeg" alt="Cartão 15"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_16.jpeg" alt="Cartão 16"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_17.jpeg" alt="Cartão 17"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_18.jpeg" alt="Cartão 18"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_19.jpeg" alt="Cartão 19"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_20.jpeg" alt="Cartão 20"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_21.jpeg" alt="Cartão 21"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_22.jpeg" alt="Cartão 22"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_23.jpeg" alt="Cartão 23"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_24.jpeg" alt="Cartão 24"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_25.jpeg" alt="Cartão 25"></div>
+                <div class="cartao"><img src="assets/images/carrossel/IMG_26.jpeg" alt="Cartão 26"></div>
+            </div>
+
+            <button class="carrossel-seta proxima" type="button" aria-label="Próximo">&#8250;</button>
+            <div class="carrossel-progresso" aria-hidden="true"><span></span></div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-texto">
+            O melhor da culinária japonesa e brasileira num só lugar
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/drop-down.js"></script>
+    <script>
+        const carrossel = document.querySelector(".carrossel");
+        const trilho = carrossel.querySelector(".carrossel-trilho");
+        const cartoes = [...trilho.querySelectorAll(".cartao")];
+        const anterior = carrossel.querySelector(".carrossel-seta.anterior");
+        const proxima = carrossel.querySelector(".carrossel-seta.proxima");
+        const progresso = carrossel.querySelector(".carrossel-progresso span");
+        const poucoMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // Entrada escalonada: só os primeiros cartões animam, o resto já aparece
+        cartoes.forEach((cartao, i) => cartao.style.setProperty("--i", Math.min(i, 6)));
+        setTimeout(() => carrossel.classList.remove("entrando"), 1500);
+
+        // Anda o tamanho de um cartão + o espaço entre eles
+        function passo() {
+            const gap = parseFloat(getComputedStyle(trilho).columnGap) || 0;
+            return cartoes[0].offsetWidth + gap;
+        }
+
+        function fim() {
+            return trilho.scrollWidth - trilho.clientWidth - 1;
+        }
+
+        // ---------- Deslizar suave (animação própria) ----------
+        // A rolagem "smooth" do navegador é rápida e para de repente.
+        // Aqui animamos o scrollLeft com uma curva que acelera e desacelera devagar.
+        const DURACAO = 850; // ms
+        const suavizar = (t) => 1 - Math.pow(1 - t, 4); // começa rápido, termina bem macio (ease-out quart)
+        let animacao = null;
+        let alvoIndice = null;
+
+        // Posição exata de cada cartão (sem arredondar), igual aos pontos de encaixe
+        function posicaoDoCartao(i) {
+            return cartoes[i].offsetLeft - cartoes[0].offsetLeft;
+        }
+
+        function indiceAtual() {
+            let melhor = 0;
+            cartoes.forEach((_, i) => {
+                if (Math.abs(posicaoDoCartao(i) - trilho.scrollLeft) <
+                    Math.abs(posicaoDoCartao(melhor) - trilho.scrollLeft)) melhor = i;
+            });
+            return melhor;
+        }
+
+        function deslizarPara(destino) {
+            destino = Math.max(0, Math.min(destino, trilho.scrollWidth - trilho.clientWidth));
+            cancelAnimationFrame(animacao);
+
+            const inicio = trilho.scrollLeft;
+            const distancia = destino - inicio;
+            if (Math.abs(distancia) < 1) {
+                terminarAnimacao();
+                return;
+            }
+
+            // Desliga o "encaixe" enquanto anima, senão ele briga com a animação
+            trilho.style.scrollSnapType = "none";
+            trilho.style.scrollBehavior = "auto";
+            carrossel.classList.add("deslizando");
+
+            // Distâncias longas (ex.: voltar ao começo) ganham um pouco mais de tempo
+            const duracao = DURACAO * Math.min(2, Math.max(1, Math.abs(distancia) / (passo() * 3)));
+            let t0 = null;
+
+            function quadro(agora) {
+                if (t0 === null) t0 = agora;
+                const t = Math.min((agora - t0) / duracao, 1);
+                trilho.scrollLeft = inicio + distancia * suavizar(t);
+                if (t < 1) {
+                    animacao = requestAnimationFrame(quadro);
+                } else {
+                    terminarAnimacao();
+                }
+            }
+            animacao = requestAnimationFrame(quadro);
+        }
+
+        function terminarAnimacao() {
+            cancelAnimationFrame(animacao);
+            animacao = null;
+            alvoIndice = null;
+            trilho.style.scrollSnapType = "";
+            trilho.style.scrollBehavior = "";
+            carrossel.classList.remove("deslizando");
+        }
+
+        function mover(direcao) {
+            // Cliques seguidos somam (2 cliques rápidos = anda 2 cartões, sem travar)
+            const base = alvoIndice ?? indiceAtual();
+            // último cartão que ainda dá para alinhar (no PC, os 2 finais já aparecem juntos)
+            const max = trilho.scrollWidth - trilho.clientWidth;
+            let ultimo = cartoes.findIndex((_, i) => posicaoDoCartao(i) >= max - 1);
+            if (ultimo === -1) ultimo = cartoes.length - 1;
+            alvoIndice = Math.max(0, Math.min(base + direcao, ultimo));
+            deslizarPara(posicaoDoCartao(alvoIndice));
+        }
+
+        // Se a pessoa arrastar/rolar no meio da animação, ela assume o controle
+        ["wheel", "touchstart", "pointerdown"].forEach((ev) =>
+            trilho.addEventListener(ev, () => { if (animacao) terminarAnimacao(); }, { passive: true })
+        );
+
+        anterior.addEventListener("click", () => { mover(-1); reiniciarAuto(); });
+        proxima.addEventListener("click", () => { mover(1); reiniciarAuto(); });
+
+        // Setas do teclado quando o carrossel está focado
+        trilho.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowRight") { e.preventDefault(); mover(1); }
+            if (e.key === "ArrowLeft") { e.preventDefault(); mover(-1); }
+        });
+
+        // Setas apagadas no começo/fim + barra de progresso
+        let agendado = false;
+        function atualizar() {
+            agendado = false;
+            const max = fim();
+            anterior.disabled = trilho.scrollLeft <= 0;
+            proxima.disabled = trilho.scrollLeft >= max;
+            progresso.style.transform = `scaleX(${max > 0 ? Math.min(trilho.scrollLeft / max, 1) : 1})`;
+        }
+        function agendarAtualizacao() {
+            if (!agendado) { agendado = true; requestAnimationFrame(atualizar); }
+        }
+        trilho.addEventListener("scroll", agendarAtualizacao, { passive: true });
+        window.addEventListener("resize", agendarAtualizacao);
+        atualizar();
+
+        // Destaca os cartões que estão inteiros na tela
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach((e) => e.target.classList.toggle("visivel", e.intersectionRatio >= 0.85));
+        }, { root: trilho, threshold: [0, 0.85, 1] });
+        cartoes.forEach((cartao) => observador.observe(cartao));
+
+        // Passa sozinho a cada 4s; pausa quando a pessoa interage
+        let timer = null;
+        let pausado = false;
+
+        function avancarAuto() {
+            if (pausado || document.hidden) return;
+            if (trilho.scrollLeft >= fim()) {
+                alvoIndice = 0;
+                deslizarPara(0);
+            } else {
+                mover(1);
+            }
+        }
+        function iniciarAuto() {
+            if (poucoMovimento) return;
+            clearInterval(timer);
+            timer = setInterval(avancarAuto, 4000);
+        }
+        function reiniciarAuto() { iniciarAuto(); }
+
+        const pausar = () => { pausado = true; };
+        const retomar = () => { pausado = false; reiniciarAuto(); };
+        carrossel.addEventListener("mouseenter", pausar);
+        carrossel.addEventListener("mouseleave", retomar);
+        carrossel.addEventListener("focusin", pausar);
+        carrossel.addEventListener("focusout", retomar);
+        trilho.addEventListener("touchstart", pausar, { passive: true });
+        trilho.addEventListener("touchend", () => setTimeout(retomar, 3000), { passive: true });
+
+        iniciarAuto();
+    </script>
 </body>
+
 </html>

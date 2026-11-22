@@ -139,8 +139,8 @@ main #pedidos > a:hover #whatsapp {
     transform: translateY(-3px);
 }
 
-/* TABLET */
-@media (max-width: 950px) {
+/* TABLET (3 colunas só cabem com folga a partir de ~1100px) */
+@media (max-width: 1100px) {
     main #pedidos {
         grid-template-columns: minmax(0, 360px);
         gap: 16px;
@@ -205,12 +205,12 @@ footer #footer-texto {
     word-wrap: break-word;
 }
 
-/* ---------- Retrato (até 768px) ---------- */
-@media (max-width: 768px) and (orientation: portrait) {
+/* ---------- Retrato (até 1024px) ---------- */
+@media (max-width: 1024px) and (orientation: portrait) {
     footer {
         grid-area: unset;
         height: 140px;
-        width: 100vw;
+        width: 100%;
         flex-direction: column;
         gap: 15px;
         padding: 20px 10px;

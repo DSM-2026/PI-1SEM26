@@ -1,0 +1,267 @@
+/* ---------- Variáveis do carrossel ---------- */
+.carrossel {
+    /* Largura do cartão: cresce com a tela, mas nunca passa de 357px
+       e nunca fica mais alto que ~72% da altura da janela */
+    --cartao-largura: min(clamp(220px, 26vw, 357px), calc(72vh * 357 / 560));
+    --cartao-gap: clamp(16px, 4vw, 70px);
+    --seta-tamanho: 48px;
+    --duracao: .5s;
+    --curva: cubic-bezier(.22, .61, .36, 1);
+
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* em cima: espaço para a logo que "vaza" da barra vermelha */
+    padding: 80px calc(var(--seta-tamanho) + 24px) 40px;
+}
+
+/* ---------- Faixa que rola e "encaixa" em cada cartão ---------- */
+.carrossel-trilho {
+    display: flex;
+    gap: var(--cartao-gap);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 4px;
+    /* espaço para a sombra e o "levantar" do hover não serem cortados */
+    padding: 24px 4px 32px;
+    scrollbar-width: none;
+    /* esconde a barra (Firefox) */
+
+    /* bordas laterais esfumadas */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+
+.carrossel-trilho::-webkit-scrollbar {
+    display: none;
+    /* esconde a barra (Chrome/Safari) */
+}
+
+/* ---------- Cartões ----------
+   A caixa .cartao nunca muda de tamanho: é nela que fica o "encaixe".
+   Os efeitos (escala, opacidade) ficam só na imagem de dentro,
+   assim o encaixe não "corrige" a posição depois do deslize. */
+.cartao {
+    flex: 0 0 var(--cartao-largura);
+    width: var(--cartao-largura);
+    scroll-snap-align: start;
+}
+
+.cartao img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 357 / 560;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+    user-select: none;
+    -webkit-user-drag: none;
+
+    /* estado "fora de foco" (parcialmente visível) */
+    opacity: .45;
+    transform: scale(.9);
+    filter: saturate(.7);
+    transition:
+        transform var(--duracao) var(--curva),
+        opacity var(--duracao) var(--curva),
+        filter var(--duracao) var(--curva),
+        box-shadow var(--duracao) var(--curva);
+}
+
+/* Cartão inteiro na tela */
+.cartao.visivel img {
+    opacity: 1;
+    transform: scale(1);
+    filter: none;
+}
+
+/* Enquanto desliza: os cartões "recuam" um pouco e voltam ao parar,
+   dando sensação de movimento e peso em vez de um corte seco */
+.carrossel.deslizando .cartao.visivel img {
+    transform: scale(.96);
+}
+
+/* Hover: levanta e dá zoom leve */
+@media (hover: hover) {
+    .carrossel:not(.deslizando) .cartao.visivel img:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 22px 40px rgba(0, 0, 0, .35);
+    }
+}
+
+/* Entrada da página: cartões sobem um após o outro */
+.carrossel.entrando .cartao img {
+    animation: cartao-entrada .8s var(--curva) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+@keyframes cartao-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(.92);
+    }
+}
+
+/* ---------- Setas ---------- */
+.carrossel-seta {
+    position: absolute;
+    top: calc(50% - 20px);
+    /* compensa a barra de progresso embaixo */
+    transform: translateY(-50%);
+    width: var(--seta-tamanho);
+    height: var(--seta-tamanho);
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .55);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    padding-bottom: 4px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background .25s, opacity .25s, transform .25s var(--curva);
+}
+
+.carrossel-seta:hover:not(:disabled) {
+    background: #C00B1E;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrossel-seta:active:not(:disabled) {
+    transform: translateY(-50%) scale(.95);
+}
+
+.carrossel-seta:focus-visible {
+    outline: 3px solid #DDA83A;
+    outline-offset: 3px;
+}
+
+.carrossel-seta:disabled {
+    opacity: .25;
+    cursor: default;
+}
+
+.carrossel-seta.anterior {
+    left: 12px;
+}
+
+.carrossel-seta.proxima {
+    right: 12px;
+}
+
+/* ---------- Barra de progresso ---------- */
+.carrossel-progresso {
+    height: 6px;
+    width: min(320px, 60%);
+    margin: 8px auto 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .15);
+    overflow: hidden;
+}
+
+.carrossel-progresso span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: #C00B1E;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .2s linear;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+    .carrossel {
+        --cartao-largura: min(clamp(220px, 40vw, 340px), calc(70vh * 357 / 560));
+    }
+}
+
+/* ---------- Celular (retrato) ---------- */
+@media (max-width: 768px) {
+    .carrossel {
+        --cartao-largura: min(78vw, calc(65vh * 357 / 560));
+        --cartao-gap: 16px;
+        --seta-tamanho: 40px;
+        padding: 16px 0;
+    }
+
+    .carrossel-trilho {
+        /* espaço nas laterais para o 1º e o último cartão ficarem no centro */
+        padding-inline: calc((100% - var(--cartao-largura)) / 2);
+        scroll-padding-inline: 0;
+    }
+
+    /* Um cartão por vez, centralizado, mostrando um pedaço dos vizinhos */
+    .cartao {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+
+    .cartao img {
+        border-radius: 22px;
+    }
+
+    .carrossel-seta {
+        font-size: 22px;
+        background: rgba(0, 0, 0, .45);
+    }
+
+    .carrossel-seta.anterior {
+        left: 8px;
+    }
+
+    .carrossel-seta.proxima {
+        right: 8px;
+    }
+}
+
+/* ---------- Celular deitado (paisagem baixa) ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .carrossel {
+        --cartao-largura: calc(62vh * 357 / 560);
+        padding-block: 8px;
+    }
+}
+
+/* ---------- Rodapé: texto centralizado e sem encostar nas bordas ---------- */
+footer #footer-texto {
+    text-align: center;
+    padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+    footer #footer-texto {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+}
+
+/* ---------- Telas com menu ☰ (a logo não "vaza" tanto, o main já tem espaço) ---------- */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .carrossel {
+        padding-top: 16px;
+    }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+    .carrossel {
+        padding-top: 8px;
+    }
+}
+
+/* ---------- Quem prefere menos movimento ----------
+   (no Windows, isso liga quando "Efeitos de animação" está desligado)
+   Só tira a entrada animada; o deslizar ao clicar continua suave,
+   porque é a própria pessoa que pediu o movimento. */
+@media (prefers-reduced-motion: reduce) {
+    .carrossel.entrando .cartao img {
+        animation: none;
+    }
+}

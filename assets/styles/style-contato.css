@@ -377,8 +377,8 @@ footer #footer-texto {
     }
 }
 
-/* ---------- Retrato (até 768px) ---------- */
-@media (max-width: 768px) and (orientation: portrait) {
+/* ---------- Retrato (até 1024px) ---------- */
+@media (max-width: 1024px) and (orientation: portrait) {
     footer {
         grid-area: unset;
         height: 140px;

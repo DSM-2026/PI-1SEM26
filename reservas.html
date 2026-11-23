@@ -4,8 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Seu Bentô | Reservas</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/global.css">
+    <link rel="stylesheet" href="./assets/styles/style-reservas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul class="nav-esq">
+               <li><a href="./index.html">HOME</a></li>
+               <li><a href="./sobrenos.html">SOBRE NÓS</a></li>
+               <li><a href="./galeria.html">GALERIA</a></li>
+            </ul>
+            <img src="assets/images/logotipo.jpg.jpeg" alt="Logotipo do restaurante Seu Bentô">
+            <ul class="nav-dir">
+                <li><a class="active" href="./reservas.html">RESERVAS</a></li>
+                <li><a href="./pedidos.html">PEDIDOS</a></li>
+                <li><a href="./contato.html">CONTATO</a></li>
+            </ul>
+            <div class="icone-menu" id="botaoMenu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <ul class="menu-mobile" id="menuMobile">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./sobrenos.html">SOBRE NÓS</a></li>
+            <li><a href="./galeria.html">GALERIA</a></li>
+            <li><a class="active" href="./reservas.html">RESERVAS</a></li>
+            <li><a href="./pedidos.html">PEDIDOS</a></li>
+            <li><a href="./contato.html">CONTATO</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div id="texto">
+            <p><strong>Queremos fazer parte da sua história!</strong></p>
+            <p>   Aqui, cada detalhe é pensado para que você e seus convidados se sintam em casa. Da nossa cozinha sai um cardápio feito com muito carinho, personalizado do jeitinho que você sempre sonhou. Seja para uma reunião pequena ou para aquele grande sonho de família, nós temos o espaço ideal:</p>
+            <p><strong>Vamos planejar seu momento juntos?<br>Entre em contato com a gente!</strong></p>
+            <a href="https://wa.me/19989048246">
+                <div id="whatsapp">
+                    <div class="whatsapp-imagem">
+                        <img style="width: 120px; height: 110px" src="assets/images/whatsapp-logo-whatsapp-logo-transparent-whatsapp-icon-transparent-free-free-png.webp" />
+                    </div>
+                    <div class="card-texto">
+                        <span class="titulo">Entre em contato</span>
+                        <span class="descricao">(19) 98904-8246</span>
+                    </div>
+                    <div class="seta">
+                        <svg width="24" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="512" height="512"/>
+                            <g id="image 4 [Vectorized]">
+                            <path id="Vector" d="M146.306 0H154.649C160.527 2.11137 164.005 2.5518 169.019 7.06705C172.7 10.3811 176.025 13.8433 179.521 17.3412L196.615 34.4437L249.724 87.5567L345.553 183.382L381.03 218.858C387.115 224.944 393.328 230.999 399.215 237.23C406.123 244.541 408.05 256.247 404.618 265.575C401.57 273.848 393.038 280.973 386.798 287.21L366.538 307.457L305.275 368.71L214.292 459.693L185.149 488.853C180.21 493.795 173.73 500.648 168.606 505.133C166.702 506.793 164.572 508.173 162.281 509.233C160.033 510.278 156.438 511.12 154.73 512H146.122C144.89 511.438 142.895 510.84 141.561 510.445C132.098 507.633 125.696 498.438 118.686 492.022C111.83 485.527 106.444 479.348 105.793 469.585C105.004 457.75 110.214 450.323 118.484 442.53C121.301 439.875 124.334 436.695 127.109 433.918L156.236 404.785L256.465 304.557L288.395 272.633C293.04 267.985 300.825 260.705 304.853 255.995C304.513 254.822 295.68 246.297 294.02 244.641L265.755 216.377L153.225 103.82L126.266 76.8643C121.349 71.9465 115.581 66.6135 111.231 61.2593C105.111 53.728 104.459 41.533 108.48 32.9832C109.528 30.764 110.845 28.682 112.401 26.7838C114.718 23.9426 118.802 19.9909 121.588 17.2676C125.899 13.0524 130.542 7.69785 135.462 4.37582C138.534 2.30099 142.802 1.23892 146.306 0Z" fill="white"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div id="card-deck" class="card-espaco">
+            <p><strong>Nosso Deck (Até 15 pessoas):</strong> Aquele cantinho gostoso e reservado, perfeito para um almoço em família ou um encontro com os amigos mais próximos.</p>
+        </div>
+
+        <div id="card-salao" class="card-espaco">
+            <p><strong>Salão Completo & Buffet (De 80 a 150 pessoas):</strong> O lugar daquela grande festa! Casamentos, bodas e momentos inesquecíveis com estrutura completa e banquete sob medida.</p>
+        </div>
+
+        <div id="card-mezanino" class="card-espaco">
+            <p><strong>Nosso Mezanino (Até 30 pessoas):</strong> Um espaço exclusivo para juntar quem você ama em aniversários, batizados ou comemorações especiais.</p>
+        </div>
+    </main>
+
+     <footer>
+        <div class="rodape">
+            <p>O melhor da culinária japonesa e brasileira num só lugar</p>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/drop-down.js"></script>
 </body>
 </html>

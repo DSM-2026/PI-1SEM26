@@ -1,0 +1,210 @@
+main{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "card-deck card-salao card-mezanino texto";
+    gap: 54px;
+    padding: 60px;
+}
+
+#texto{
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+#texto p{
+    color: black;
+    text-align: justify;
+    font-size: 18px;
+    background: none;
+    width: auto;
+}
+
+.card-espaco{
+    display: flex;
+    align-items: end;
+    height: 549px;
+}
+
+.card-espaco p{
+    height: 35%;
+    font-size: 18px;
+    width: 300px;
+    text-align: justify;
+    border-radius: 0 0 30px 30px;
+    background: #48433B;
+}
+
+
+#card-deck{
+    background-image: url("../images/deck.png");
+    background-repeat: no-repeat;
+    grid-area: card-deck;
+}
+
+#card-salao{
+    background-image: url("../images/salao.png");
+    background-repeat: no-repeat;
+    grid-area: card-salao;
+}
+
+#card-mezanino{
+    background-image: url("../images/mezanino.png");
+    background-repeat: no-repeat;
+    grid-area: card-mezanino;
+}
+
+#texto > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+#texto #whatsapp {
+    background: #32D851;
+    width: 100%;
+    min-height: 135px;
+    padding: 12px 18px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    border-radius: 30px;
+    transition: transform 0.2s ease;
+}
+
+#texto .whatsapp-imagem {
+    flex: 0 0 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#texto .whatsapp-imagem img {
+    width: 85px;
+    height: 85px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#texto .card-texto {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+    text-align: left;
+}
+
+#texto .titulo {
+    font-size: clamp(14px, 1.5vw, 19px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+#texto .descricao {
+    font-size: clamp(12px, 1.2vw, 15px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+#texto .seta {
+    flex: 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#texto .seta svg {
+    width: 20px;
+    height: 20px;
+}
+
+#texto > a:hover #whatsapp {
+    transform: translateY(-3px);
+}
+
+footer p{
+    font-size: 28px;
+    font-weight: 800;
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+    main{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "card-deck" "card-salao" "card-mezanino" "texto";
+        gap: 10px;
+        padding-top: 100px;
+}
+    
+    footer{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 19px 22px 19px 22px;
+}
+
+    footer p{
+    font-size: 28px;
+    text-align: center;
+}
+}
+
+@media (max-width: 950px) and (orientation: landscape){
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "card-deck card-salao card-mezanino" "texto texto texto";
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .card-espaco{
+        height: 650px;
+        border-radius: 30px;
+    }
+
+    .card-espaco p{
+        height: 40%;
+        width: 260px;
+    }
+
+    #texto{
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+     #texto p{
+        width: auto;
+    }
+
+    #texto #whatsapp {
+        width: 400px;
+    }
+
+    #texto > a {
+        width: fit-content;
+}
+
+    footer p{
+        text-align: center;
+        font-size: 18px;
+    }
+}

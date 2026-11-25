@@ -139,7 +139,7 @@ main{
 
 footer p{
     font-size: 28px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 @media (max-width: 1024px) and (orientation: portrait){
@@ -161,7 +161,7 @@ footer p{
 }
 
     footer p{
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
 }
 }
@@ -205,6 +205,6 @@ footer p{
 
     footer p{
         text-align: center;
-        font-size: 18px;
+        font-size: 20px;
     }
 }

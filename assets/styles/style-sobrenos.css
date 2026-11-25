@@ -6,7 +6,6 @@ main{
     display: flex;
     gap: clamp(24px, 4vw, 50px);
     align-items: center;
-    /* margens laterais para o texto não encostar nas bordas da tela */
     padding: 40px clamp(20px, 5vw, 80px);
 }
 
@@ -14,7 +13,6 @@ main{
     flex-shrink: 0;
 }
 
-/* a foto diminui junto com a tela (máx. 400px, como antes) */
 .foto-fachada img{
     height: clamp(220px, 28vw, 400px);
     width: clamp(220px, 28vw, 400px);
@@ -27,7 +25,6 @@ main{
     display: flex;
     flex-direction: column;
     padding-top: 80px;
-    /* deixa o texto quebrar linha em vez de empurrar a página para o lado */
     flex: 1 1 0;
     min-width: 0;
     max-width: 900px;
@@ -46,11 +43,9 @@ main{
 
 footer p{
     font-size: 28px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
-/* No layout de computador o global.css fixa os parágrafos em 680px;
-   aqui eles passam a acompanhar a coluna de texto (máx. 680px) */
 @media (min-width: 1025px), (min-width: 951px) and (orientation: landscape){
     .texto p{
         width: auto;
@@ -78,7 +73,6 @@ footer p{
         max-width: none;
     }
 
-    /* texto justificado em tela estreita: hifeniza para não abrir buracos entre palavras */
     .bloco-texto1 p, .bloco-texto2 p{
         hyphens: auto;
         -webkit-hyphens: auto;
@@ -119,7 +113,7 @@ footer p{
     }
 
     footer p{
-        font-size: 28px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -129,6 +123,7 @@ footer p{
     body{
         background-color: #DFD1B9;
         background-image: none;
+        width: 100vw;
     }
 
     main{

@@ -1,6 +1,4 @@
 
-/* ---------- CONFIGURAÇÃO GERAL ---------- */
-
 * {
     margin: 0;
     padding: 0;
@@ -15,20 +13,16 @@ body {
 body {
     min-height: 100vh;
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     font-family: "Montserrat Alternates", sans-serif;
     color: #fff;
-
     background-image: url("../images/buffet_3.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* ---------- FUNDOS RESPONSIVOS ---------- */
 
 @media (min-width: 769px) and (max-width: 1199px) {
     body {
@@ -48,27 +42,19 @@ body {
     }
 }
 
-/* ---------- CONTEÚDO PRINCIPAL ---------- */
-
 main {
     flex: 1;
 }
 
-
-/* ---------- FOOTER DESKTOP ---------- */
-
 footer {
     width: 100%;
-    min-height: 120px;
+    height: 80px;
     padding: 15px 20px;
-
     background-color: rgb(0 0 0 / 68%);
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     gap: 40px;
     text-align: center;
 }
@@ -103,8 +89,6 @@ footer .horarios p {
     font-size: 16px;
     white-space: nowrap;
 }
-
-/* ---------- MOBILE ---------- */
 
 @media (max-width: 768px) {
     footer {

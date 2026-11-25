@@ -263,7 +263,7 @@ footer #footer-texto {
     color: white;
     font-size: 28px;
     font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 34px;
     word-wrap: break-word;
 }
@@ -385,7 +385,7 @@ footer #footer-texto {
         width: 100%;
         flex-direction: column;
         gap: 15px;
-        padding: 20px 10px;
+        padding-top: 35px;
         margin-top: auto;
     }
 }
